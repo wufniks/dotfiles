@@ -1,18 +1,20 @@
 [user]
-	name = Heejae Shin
-	email = hshin@gracenote.com
+name = Heejae Shin
+email = hshin@nielsen.com
 
 [alias]
-    co = checkout
-    dt = difftool
-    ci = commit
-    cia = "commit -a"
-    s = status
-    ps = push
-    p = pull
-    a = add
-    aa = "add --all"
-    ai = "add --interactive"
-    b = branch
-    f = fetch
-    rb = rebase
+co = checkout
+dt = difftool
+ci = commit
+cia = "commit -a"
+s = status
+ps = push
+p = pull
+a = add
+aa = "add --all"
+ai = "add --interactive"
+b = branch
+f = fetch
+rb = rebase
+br = branch
+st = status
