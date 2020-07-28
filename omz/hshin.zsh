@@ -1,13 +1,5 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /usr/local/etc/profile.d/z.sh
-
-### Added by Zinit's installer
-source '/Users/hshin/.zinit/bin/zinit.zsh'
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
-
 zinit ice wait"0" blockf
 zinit light zsh-users/zsh-completions
 
