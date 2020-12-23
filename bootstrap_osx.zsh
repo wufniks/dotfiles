@@ -51,6 +51,9 @@ main() {
 	git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
 	~/.emacs.d/bin/doom install
 
+    # color themes
+    git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git $DOTFILES_DIR/
+
 	configure
 }
 
