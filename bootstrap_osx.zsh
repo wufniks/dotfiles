@@ -41,9 +41,6 @@ main() {
 	# install oh my zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-	# link custom setting for omz
-	ln -s $DOTFILES_DIR/omz/hshin.zsh ~/.oh-my-zsh/custom/
-
 	# install zinit
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
