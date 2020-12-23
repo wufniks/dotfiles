@@ -1,53 +1,24 @@
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-# Customize to your needs...
-# export PATH=$PATH:/Users/hshin/.cargo/bin:/usr/local/sbin
-# export PATH="$HOME/.cargo/bin:$PATH"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias amazon_ssh='ssh -o StrictHostKeyChecking=no -i ~/.ssh/amazon_ubuntu.pem -l ubuntu $@'
-alias amazon_ssh_tvacr='ssh -o StrictHostKeyChecking=no -i ~/.ssh/tvacr.pem -l ubuntu $@'
-alias la="exa -abghl --git --color=automatic"
-# alias c='pygmentize -O style=borland -f console256 -g'
+zinit ice wait"0" blockf
+zinit light zsh-users/zsh-completions
 
+zinit ice wait"0" atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
 
-. /usr/local/etc/profile.d/z.sh
+zinit ice wait"0" atinit"zpcompinit; zpcdreplay"
+zinit light zdharma/fast-syntax-highlighting
 
-alias cl='colorls --sort-dirs --report'
-alias ct='colorls --tree'
+# zinit ice compile"*.lzui" from"notabug"
+# zinit load zdharma/zui
 
-source $(dirname $(gem which colorls))/tab_complete.sh
+# zinit light zdharma/zplugin-crasis
 
-alias upload_bionic='docker run -it --rm -v `pwd`:/src -w /src -e DEB_S3_CODENAME=bionic dreg.be/devops/deb-s3:0.1.0 $@'
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+# zinit ice svn; zinit snippet OMZ::plugins/z
 
-alias ec='/usr/local/bin/emacsclient -nc'
+# initializing starship
+eval "$(starship init zsh)"
 
-### Added by Zplugin's installer
-source '/Users/hshin/.zplugin/bin/zplugin.zsh'
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin's installer chunk
-
-zplugin ice wait"0" blockf
-zplugin light zsh-users/zsh-completions
-
-zplugin ice wait"0" atload"_zsh_autosuggest_start"
-zplugin light zsh-users/zsh-autosuggestions
-
-zplugin ice wait"0" atinit"zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
-
-zplugin ice compile"*.lzui" from"notabug"
-zplugin load zdharma/zui
-
-zplugin light zdharma/zplugin-crasis
-
-zplugin snippet OMZ::plugins/git/git.plugin.zsh
-zplugin ice svn; zplugin snippet OMZ::plugins/z
-
-zplugin light romkatv/powerlevel10k
-source ~/.purepower
+#export EDITOR=/usr/local/bin/micro
+#export VISUAL=/usr/local/bin/micro
