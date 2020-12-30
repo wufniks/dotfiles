@@ -51,8 +51,18 @@ main() {
 	git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
 	~/.emacs.d/bin/doom install
 
-    # color themes
-    git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git $DOTFILES_DIR/
+    	# color themes
+    	git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git $DOTFILES_DIR/
+
+	# install vim-plug
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    ln -s $DOTFILES_DIR/vimrc $HOME/.vimrc
+    mkdir -p $HOME/.config/nvim
+    ln -s $DOTFILES_DIR/nvimrc $HOME/.config/nvim/init.vim
 
 	configure
 }
