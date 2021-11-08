@@ -30,7 +30,7 @@ configure() {
 main() {
 	prepare
 
-	git clone https://github.com/wufniks/dotfiles.git $DOTFILES_DIR
+	git clone https://github.com/wufniks/dotfiles.git $DOTFILES_DIR || true
 
 	install_formulas
 
@@ -42,7 +42,7 @@ main() {
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	# install zinit
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh)"
 
 	cat $DOTFILES_DIR/zshrc >> $(HOME)/.zshrc
 
