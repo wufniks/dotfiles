@@ -4,3 +4,6 @@
 [submodule "config/kitty/0d5731693084b2831c88ca23936d20e8"]
 	path = config/kitty/gruvbox
 	url = git@gist.github.com:0d5731693084b2831c88ca23936d20e8.git
+[submodule "config/kitty/kitty-themes"]
+	path = config/kitty/kitty-themes
+	url = git@github.com:dexpota/kitty-themes.git
