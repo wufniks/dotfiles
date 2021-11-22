@@ -1,0 +1,39 @@
+# $ ls and Friends {{{
+
+if (( $+commands[lsd] )); then
+  alias l='lsd -Al --date=relative --group-dirs=first --blocks=permission,user,size,date,name -I=.DS_Store'
+  alias ll='lsd -l --date=relative --group-dirs=first --blocks=permission,user,size,date,name -I=.DS_Store'
+  alias lt='lsd --tree --depth=2 --date=relative --group-dirs=first -I=.DS_Store'
+else
+  alias l='ls -alh'
+  alias ll='ls -lh'
+fi
+
+alias LS='ls'
+alias ll='lsd -1Al --group-dirs first'
+
+# END $ ls and Friends }}}
+
+# Editors {{{
+
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias xcode='open -a Xcode'
+
+# END Editors }}}
+
+# SSH {{{
+
+if [[ $TERM == "xterm-kitty" ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
+
+# END SSH }}}
+
+# Verbosity {{{
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+# }}}

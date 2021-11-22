@@ -4,16 +4,16 @@ set -euo pipefail
 DOTFILES_DIR=$HOME/.dotfiles
 
 install_homebrew() {
-	if ! type brew > /dev/null; then
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	fi
-	brew update
+    if ! type brew > /dev/null; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+    brew update
 }
 
 # prerequisite
 prepare() {
     xcode-select --install || true
-	install_homebrew
+    install_homebrew
 }
 
 install_formulas() {
@@ -28,43 +28,45 @@ configure() {
 }
 
 main() {
-	prepare
+    prepare
 
-	git clone https://github.com/wufniks/dotfiles.git $DOTFILES_DIR || true
+    git clone https://github.com/wufniks/dotfiles.git $DOTFILES_DIR || true
 
-	install_formulas
+    cp $DOTFILES_DIR/.zshenv $(HOME)/.zshenv
+    ln -s $DOTFILES_DIR/config $(HOME)/.config
 
-	# install rustup
-	curl https://sh.rustup.rs -sSf | sh
+    install_formulas
+
+    # install rustup
+    curl https://sh.rustup.rs -sSf | sh
 
 
-	# install oh my zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    # install oh my zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-	# install zinit
-	sh -c "$(curl -fsSL https://git.io/zinit-install)"
+    # install zinit
+    sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
-	cat $DOTFILES_DIR/zshrc >> $(HOME)/.zshrc
 
-	# install emacs-plus
-	# brew tap d12frosted/emacs-plus && brew install emacs-plus
-	git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-	~/.emacs.d/bin/doom install
+    # install emacs-plus
+    # brew tap d12frosted/emacs-plus && brew install emacs-plus
+    git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+    ~/.emacs.d/bin/doom install
 
-    	# color themes
-    	git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git $DOTFILES_DIR/
+    # color themes
+    git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git $DOTFILES_DIR/
 
-	# install vim-plug
-	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    # install vim-plug
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     ln -s $DOTFILES_DIR/vimrc $HOME/.vimrc
     mkdir -p $HOME/.config/nvim
     ln -s $DOTFILES_DIR/nvimrc $HOME/.config/nvim/init.vim
 
-	configure
+    configure
 }
 
 main $@
