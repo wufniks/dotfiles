@@ -198,6 +198,13 @@ export HISTFILE="$XDG_CACHE_HOME/.zsh_history"
 
 # END History }}}
 
+# Emacs Mode {{{
+
+bindkey -e
+
+# END vim }}}
+
+
 # Backgrounding and Unbackgrounding {{{
 
 # Use Ctrl-z swap in and out of vim (or any other process)

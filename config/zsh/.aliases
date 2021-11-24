@@ -16,6 +16,7 @@ alias ll='lsd -1Al --group-dirs first'
 
 # Editors {{{
 
+alias vi='nvim'
 alias vim='nvim'
 alias vimdiff='nvim -d'
 alias xcode='open -a Xcode'
