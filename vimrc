@@ -20,3 +20,4 @@ highlight Comment cterm=italic gui=italic
 set bg=dark
 colorscheme gruvbox
 
+set rtp+=/opt/homebrew/opt/fzf

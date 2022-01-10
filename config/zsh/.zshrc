@@ -256,8 +256,7 @@ execute_cmd_if_exists tls
 
 # END Startup Tools }}}
 
-
-# export GPG_TTY=$(tty)
+export GPG_TTY=$(tty)
 
 # This speeds up pasting w/ autosuggest
 # https://github.com/zsh-users/zsh-autosuggestions/issues/238
