@@ -21,6 +21,14 @@ export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share"
 export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share"
 export XDG_RUNTIME_DIR="$HOME/.local/run/user/$(id -u)"
 
+# Rust / Cargo
+export CARGO_HOME="$HOME"/.cargo
+# export CARGO_HOME="$XDG_DATA_HOME"/cargo
+# export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
+# export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+# export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
+# export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
 # zsh + tools
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export _Z_DATA="$XDG_CACHE_HOME"/.z
@@ -45,7 +53,7 @@ export PYENV_ROOT=$HOME/.pyenv
 
 # export PATH="$PATH:$CARGO_HOME/bin"
 # export PATH="$PATH:$GOPATH/bin"
-# export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 # export PATH="$PATH:$HOME/.poetry/bin"
 # export PATH="$PATH:$HOME/Applications"
 # export PATH="$PATH:/sbin"
@@ -54,3 +62,9 @@ export PYENV_ROOT=$HOME/.pyenv
 # export PATH="$PATH:/usr/local/sbin"
 # export PATH="$PATH:/usr/sbin"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
+
+. "$HOME/.cargo/env"
