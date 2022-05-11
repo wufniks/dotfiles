@@ -114,7 +114,7 @@ FZ_SUBDIR_CMD=jj
 
 # ssh {{{
 
-zstyle :omz:plugins:ssh-agent identities id_momenti
+# zstyle :omz:plugins:ssh-agent identities id_momenti
 
 # END ssh }}}
 
