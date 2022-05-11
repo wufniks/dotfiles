@@ -51,7 +51,7 @@ export PYENV_ROOT=$HOME/.pyenv
 
 # TODO: https://www.arp242.net/zshrc.html#easier-path
 
-# export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$PATH:$CARGO_HOME/bin"
 # export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.local/bin"
 # export PATH="$PATH:$HOME/.poetry/bin"
@@ -66,5 +66,3 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"
-
-. "$HOME/.cargo/env"
