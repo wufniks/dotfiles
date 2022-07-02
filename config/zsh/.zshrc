@@ -71,7 +71,9 @@ zinit wait lucid for \
  atload"!export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=yellow,fg=white,bold'" \
     zsh-users/zsh-history-substring-search \
  pick"git-it-on.plugin.zsh" \
-    peterhurford/git-it-on.zsh #\
+    peterhurford/git-it-on.zsh \
+ pick"autoenv.zsh" \
+    Tarrasch/zsh-autoenv
  # pick"zsh-interactive-cd.plugin.zsh" \
  #    changyuheng/zsh-interactive-cd \
  # pick"z.sh" \
