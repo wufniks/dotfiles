@@ -12,6 +12,7 @@ OS="$(uname -s)"
 # Prompt {{{
 
 # Config in ~/.config/starship.toml
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/default.toml"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
