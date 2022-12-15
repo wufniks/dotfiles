@@ -58,6 +58,8 @@ zinit ice wait'!'
 zinit snippet OMZP::fzf
 zinit ice wait'!'
 zinit snippet OMZP::ssh-agent
+zinit ice wait'!'
+zinit snippet OMZP::asdf
 
 # GitHub Plugins
 
@@ -277,3 +279,10 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 HISTSIZE=90000
 SAVEHIST=90000
 HISTFILE=~/.zsh_history
+
+CPU=$(uname -m)
+if [[ "$CPU" == "arm64" ]]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+else
+  . /usr/local/opt/asdf/libexec/asdf.sh
+fi
