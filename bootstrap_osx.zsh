@@ -25,6 +25,8 @@ configure() {
     # https://wesleywiser.github.io/post/vscode-vim-repeat-osx/
     # repeat key press in vim mode in vscode
     defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+    # do simllar thing for intellij too
+    defaults write -g ApplePressAndHoldEnabled -bool false
 }
 
 main() {
@@ -70,6 +72,10 @@ main() {
 
     ln -s $DOTFILES_DIR/.vimrc $HOME/.vimrc
     echo "Installed vim configuration"
+
+    # install intellimacs
+    git clone https://github.com/MarcoIeni/intellimacs ~/.intellimacs
+    ln -s $DOTFILES_DIR/.ideavimrc $HOME/.ideavimrc
 
     configure
 }
