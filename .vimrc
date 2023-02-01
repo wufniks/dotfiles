@@ -1,9 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Themes
-
-" Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -20,6 +17,6 @@ set termguicolors
 highlight Comment cterm=italic gui=italic
 
 set bg=dark
-colorscheme gruvbox-material
+colorscheme gruvbox
 
 set rtp+=/opt/homebrew/opt/fzf

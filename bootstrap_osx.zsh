@@ -18,7 +18,6 @@ prepare() {
 }
 
 install_formulas() {
-    # brew install pyenv pyenv-virtualenv zsh starship z tig
     brew bundle --file ${DOTFILES_DIR}/Brewfile
 }
 
@@ -37,7 +36,7 @@ main() {
 
     cp ${DOTFILES_DIR}/.zshenv ${HOME}/.zshenv
 
-    if [ ! -d ${HOME}/.config ]; then
+    if [ -d ${HOME}/.config ]; then
         mv ${HOME}/.config ${HOME}/.config.bak
     fi
     ln -s ${DOTFILES_DIR}/config ${HOME}/.config
@@ -54,9 +53,7 @@ main() {
     # install zinit
     sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
-
-    # install emacs-plus
-    # brew tap d12frosted/emacs-plus && brew install emacs-plus
+    # setup doom emacs
     git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
     ~/.emacs.d/bin/doom install
 
@@ -71,9 +68,7 @@ main() {
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     echo "Installed vim-plug"
 
-    ln -s $DOTFILES_DIR/vimrc $HOME/.vimrc
-    mkdir -p $HOME/.config/nvim
-    ln -s $DOTFILES_DIR/nvimrc $HOME/.config/nvim/init.vim
+    ln -s $DOTFILES_DIR/.vimrc $HOME/.vimrc
     echo "Installed vim configuration"
 
     configure
