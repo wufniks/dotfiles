@@ -49,17 +49,39 @@ source "${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# oh-my-zsh plugins
-zinit ice wait'!'
-zinit snippet OMZ::lib/git.zsh
-zinit ice wait'!'
-zinit snippet OMZP::git
-zinit ice wait'!'
-zinit snippet OMZP::fzf
-zinit ice wait'!'
-zinit snippet OMZP::ssh-agent
-zinit ice wait'!'
-zinit snippet OMZP::asdf
+zinit wait lucid for \
+	OMZL::clipboard.zsh \
+	OMZL::compfix.zsh \
+	OMZL::correction.zsh \
+    atload"
+        alias ..='cd ..'
+        alias ...='cd ../..'
+        alias ....='cd ../../..'
+        alias .....='cd ../../../..'
+    " \
+	OMZL::directories.zsh \
+	OMZL::git.zsh \
+	OMZL::grep.zsh \
+	OMZL::history.zsh \
+	OMZL::key-bindings.zsh \
+	OMZL::spectrum.zsh \
+	OMZL::termsupport.zsh \
+    atload"
+        alias gcd='gco dev'
+    " \
+	OMZP::git \
+	OMZP::fzf \
+	OMZP::ssh-agent \
+    OMZP::asdf \
+	OMZP::kubectl \
+    atload"
+        alias dcupb='docker-compose up --build'
+    " \
+	OMZP::docker-compose \
+    OMZP::docker/_docker \
+    djui/alias-tips \
+    # hlissner/zsh-autopair \
+    # chriskempson/base16-shell \
 
 # GitHub Plugins
 
