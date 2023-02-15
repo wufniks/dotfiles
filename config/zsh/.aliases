@@ -41,4 +41,15 @@ alias cp='cp -i'
 
 # }}}
 
+# K8s {{{
+
+alias kx='kubectx'
+alias kn='kubens'
+
+# }}}
+
+# $ ETC {{{
+
 alias sudo='sudo '
+
+# }}}
