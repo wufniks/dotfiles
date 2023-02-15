@@ -53,13 +53,6 @@ zinit wait lucid for \
 	OMZL::clipboard.zsh \
 	OMZL::compfix.zsh \
 	OMZL::correction.zsh \
-    atload"
-        alias ..='cd ..'
-        alias ...='cd ../..'
-        alias ....='cd ../../..'
-        alias .....='cd ../../../..'
-    " \
-	OMZL::directories.zsh \
 	OMZL::git.zsh \
 	OMZL::grep.zsh \
 	OMZL::history.zsh \
@@ -78,12 +71,11 @@ zinit wait lucid for \
         alias dcupb='docker-compose up --build'
     " \
 	OMZP::docker-compose \
+    as"completion" \
     OMZP::docker/_docker \
     djui/alias-tips \
-    # hlissner/zsh-autopair \
-    # chriskempson/base16-shell \
-
-# GitHub Plugins
+    hlissner/zsh-autopair \
+    chriskempson/base16-shell \
 
 # https://github.com/zdharma/zinit-configs/blob/a60ff64823778969ce2b66230fd8cfb1a957fe89/psprint/zshrc.zsh#L277
 zinit wait lucid for \
@@ -98,7 +90,9 @@ zinit wait lucid for \
  pick"git-it-on.plugin.zsh" \
     peterhurford/git-it-on.zsh \
  pick"autoenv.zsh" \
-    Tarrasch/zsh-autoenv
+    Tarrasch/zsh-autoenv \
+ atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
+    trapd00r/LS_COLORS
  # pick"zsh-interactive-cd.plugin.zsh" \
  #    changyuheng/zsh-interactive-cd \
  # pick"z.sh" \
