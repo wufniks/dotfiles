@@ -53,6 +53,13 @@ zinit wait lucid for \
 	OMZL::clipboard.zsh \
 	OMZL::compfix.zsh \
 	OMZL::correction.zsh \
+    atload"
+        alias ..='cd ..'
+        alias ...='cd ../..'
+        alias ....='cd ../../..'
+        alias .....='cd ../../../..'
+    " \
+	OMZL::directories.zsh \
 	OMZL::git.zsh \
 	OMZL::grep.zsh \
 	OMZL::history.zsh \
