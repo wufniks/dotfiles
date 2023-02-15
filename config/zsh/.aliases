@@ -40,3 +40,5 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 # }}}
+
+alias sudo='sudo '
