@@ -54,6 +54,7 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH="$PATH:$CARGO_HOME/bin"
 # export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.fig/bin"
 # export PATH="$PATH:$HOME/.poetry/bin"
 # export PATH="$PATH:$HOME/Applications"
 # export PATH="$PATH:/sbin"
