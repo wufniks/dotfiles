@@ -80,6 +80,10 @@ zinit wait lucid for \
 zinit wait lucid for \
  silent atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+ as"completion" \
+    zsh-users/zsh-completions \
  atload"!export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=yellow,fg=white,bold'" \
     zsh-users/zsh-history-substring-search \
  pick"git-it-on.plugin.zsh" \
