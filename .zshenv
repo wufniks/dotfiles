@@ -64,6 +64,7 @@ export PATH="$PATH:$HOME/.fig/bin"
 # export PATH="$PATH:/usr/sbin"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export LDFLAGS="-L/opt/homebrew/opt/node@16/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/node@16/include"

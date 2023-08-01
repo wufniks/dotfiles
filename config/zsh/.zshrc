@@ -294,3 +294,5 @@ if [[ "$CPU" == "arm64" ]]; then
 else
   . /usr/local/opt/asdf/libexec/asdf.sh
 fi
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
