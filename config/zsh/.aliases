@@ -45,6 +45,9 @@ alias cp='cp -i'
 
 alias kx='kubectx'
 alias kn='kubens'
+alias dk='dkosctl'
+alias dx='dkosctl configure'
+alias dn='dkosctl ns'
 
 # }}}
 
