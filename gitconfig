@@ -1,3 +1,26 @@
 [user]
     name = Heejae Shin
     email = wufniks@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiTWHRVBZXei2+0UtRPFVIsYDgx6OTtU689G/MU289D
+[includeIf "gitdir:~/kakaobrain/"]
+	path = ~/.dotfiles/gitconfig-kakaobrain
+
+# [commit]
+# 	gpgsign = true
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[gpg]
+	format = ssh
+	# program = /opt/homebrew/bin/gpg
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[credential]
+	helper = store

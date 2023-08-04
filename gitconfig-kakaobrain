@@ -1,0 +1,6 @@
+[user]
+	name = joel.barish(신희제)/kakaobrain
+	email = joel.barish@kakaobrain.com
+
+[url "ssh://git@github.kakaocorp.com/"]
+	insteadOf = https://github.kakaocorp.com/
