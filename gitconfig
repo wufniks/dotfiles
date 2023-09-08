@@ -2,8 +2,6 @@
     name = Heejae Shin
     email = wufniks@gmail.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILiTWHRVBZXei2+0UtRPFVIsYDgx6OTtU689G/MU289D
-[includeIf "gitdir:~/kakaobrain/"]
-	path = ~/.dotfiles/gitconfig-kakaobrain
 
 # [commit]
 # 	gpgsign = true
@@ -24,3 +22,6 @@
 
 [credential]
 	helper = store
+
+[includeIf "gitdir:~/kakaobrain/"]
+	path = ~/.dotfiles/gitconfig-kakaobrain
