@@ -288,11 +288,4 @@ HISTSIZE=90000
 SAVEHIST=90000
 HISTFILE=~/.zsh_history
 
-CPU=$(uname -m)
-if [[ "$CPU" == "arm64" ]]; then
-  . /opt/homebrew/opt/asdf/libexec/asdf.sh
-else
-  . /usr/local/opt/asdf/libexec/asdf.sh
-fi
-
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
