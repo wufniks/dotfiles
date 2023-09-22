@@ -65,7 +65,6 @@ zinit wait lucid for \
 	OMZP::git \
 	OMZP::fzf \
 	OMZP::ssh-agent \
-    OMZP::asdf \
 	OMZP::kubectl \
     atload"
         alias dcupb='docker-compose up --build'
