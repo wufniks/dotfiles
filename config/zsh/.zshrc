@@ -59,7 +59,6 @@ zinit wait lucid for \
         alias ....='cd ../../..'
         alias .....='cd ../../../..'
     " \
-	OMZL::directories.zsh \
 	OMZL::git.zsh \
 	OMZL::grep.zsh \
 	OMZL::history.zsh \
