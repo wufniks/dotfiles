@@ -7,7 +7,7 @@ end
 
 config.color_scheme = 'Gruvbox Material (Gogh)'
 -- config.color_scheme = 'Gruvbox Dark (Gogh)'
-config.font = wezterm.font 'JetBrainsMono Nerd Font Mono'
+config.font = wezterm.font 'JetBrainsMono NFM'
 config.font_size = 13.0
 
 return config
