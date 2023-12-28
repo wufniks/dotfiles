@@ -1,10 +1,10 @@
 # $ ls and Friends {{{
 
-if (( $+commands[exa] )); then
-  alias l='exa -G'
-  alias la='exa -al'
-  alias ll='exa -l --color always'
-  alias lt='exa --tree --level=2 --color always'
+if (( $+commands[eza] )); then
+  alias l='eza -G'
+  alias la='eza -al'
+  alias ll='eza -l --color always'
+  alias lt='eza --tree --level=2 --color always'
 elif (( $+commands[lsd] )); then
   alias l='lsd -Al --date=relative --group-dirs=first --blocks=permission,user,size,date,name -I=.DS_Store'
   alias ll='lsd -l --date=relative --group-dirs=first --blocks=permission,user,size,date,name -I=.DS_Store'
