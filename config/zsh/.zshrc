@@ -294,3 +294,5 @@ SAVEHIST=90000
 HISTFILE=~/.zsh_history
 
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+
+eval "$(op completion zsh)"; compdef _op op
