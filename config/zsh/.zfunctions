@@ -1,0 +1,4 @@
+kreinit() {
+    kdestroy
+    kinit --password-file=<(op read "op://KakaoBrain/Kerberos/password")
+}
