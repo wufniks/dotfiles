@@ -18,30 +18,6 @@ eval "$(zoxide init zsh)"
 
 # END Prompt }}}
 
-# FZF {{{
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# # Show hidden files in search and ignore .git directory
-# export FZF_DEFAULT_COMMAND='ag --hidden --path-to-ignore ~/.config/agignore -l -g ""'
-# export FZF_DEFAULT_OPTS="--cycle"
-# if [ "$OS" = "Darwin" ]; then
-#     export FZF_BASE="/usr/local/bin/fzf"
-# elif [ "$OS" = "Linux" ]; then
-#     export FZF_BASE="/usr/bin/fzf"
-# fi
-
-# END FZF }}}
-
-# Env Vars {{{
-
-# export BETTER_EXCEPTIONS=1     # Python Better Exceptions
-# export HOMEBREW_NO_ANALYTICS=1
-# export BAT_THEME="TwoDark"
-# export NOTES=$HOME/Desktop/Development/notes
-
-# END Env Vars }}}
-
 # Plugins {{{
 
 source "${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git/zinit.zsh"
@@ -81,6 +57,7 @@ zinit wait lucid for \
     djui/alias-tips \
     hlissner/zsh-autopair \
     chriskempson/base16-shell \
+    atuinsh/atuin
 
 # https://github.com/zdharma/zinit-configs/blob/a60ff64823778969ce2b66230fd8cfb1a957fe89/psprint/zshrc.zsh#L277
 zinit wait lucid for \
