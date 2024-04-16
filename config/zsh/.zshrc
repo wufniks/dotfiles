@@ -45,7 +45,6 @@ zinit wait lucid for \
         alias gcd='gco dev'
     " \
 	OMZP::git \
-	OMZP::fzf \
 	OMZP::ssh-agent \
 	OMZP::kubectl \
     atload"
