@@ -54,5 +54,6 @@ alias dn='dkosctl ns'
 # $ ETC {{{
 
 alias sudo='sudo '
+alias mr='mise run'
 
 # }}}
