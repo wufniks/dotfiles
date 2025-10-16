@@ -55,5 +55,6 @@ alias dn='dkosctl ns'
 
 alias sudo='sudo '
 alias mr='mise run'
+alias cld='claude'
 
 # }}}
